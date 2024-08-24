@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'MontserratAlternates';
+    src: url('./MontserratAlternates-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'NeueMachina';
+    src: url('./NeueMachina-Regular.otf');
+}
+
+::-webkit-scrollbar {
+    width: 8px;  /* Thin scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #272727; 
+    border-radius: 10px;  
+    border: 2px solid transparent; 
+    background-clip: padding-box;  
+}
+
+::-webkit-scrollbar-thumb:hover {
+    cursor:grab;
+}
+
+.video-div {
+    clip-path: circle(var(--clip) at 50% 50%);
+}
