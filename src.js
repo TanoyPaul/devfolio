@@ -6,7 +6,7 @@ let menuDiv = document.querySelector('.menu-div');
 let openMenu = document.querySelector('.open-menu');
 let closeMenu = document.querySelector('.close-menu');
 
-function videoAnimation(){
+function topAnimation(){
 
     gsap.set(
         ".about-self", {
@@ -42,11 +42,20 @@ function videoAnimation(){
 }
 
 function navAnimation(){
-    gsap.from(
+    let tl = gsap.timeline();
+    tl.from(
         'nav', {
             opacity: 0,
             duration: 1.2,
             delay: 1
+        }
+    )
+    tl.from(
+        '.top-h1', {
+            y: 20,
+            ease: Power2,
+            opacity: 0,
+            duration: 0.8
         }
     )
 }
@@ -171,7 +180,7 @@ function projectsAnimation(){
     )
 }
 
-videoAnimation()
+topAnimation()
 navAnimation()
 menuAnimation()
 scrollDownAnimation()
